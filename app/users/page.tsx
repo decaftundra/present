@@ -1,4 +1,3 @@
-// app/users/page.tsx
 'use client';
 
 import React from 'react';
@@ -6,6 +5,13 @@ import { useUserContext } from '@/context/UserContext';
 import UserCard from '../components/UserCard';
 import dynamic from 'next/dynamic';
 
+/**
+ * UsersPage Component
+ *
+ * This component displays a list of users and their presence status.
+ * It uses the `useUserContext` hook to access the user data from the `UserContext`.
+ * The component is dynamically imported and rendered client-side only.
+ */
 const UsersPage = () => {
   const { users } = useUserContext();
 

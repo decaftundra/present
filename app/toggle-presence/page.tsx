@@ -4,12 +4,22 @@ import React, { useState } from 'react';
 import { useUserContext } from '@/context/UserContext';
 import { useRouter } from 'next/navigation';
 
+/**
+ * HomePage Component
+ *
+ * This component serves as the home page and automatically redirects to the /users page.
+ * While the redirection is happening, it displays a spinner to indicate loading.
+ */
 const TogglePresencePage = () => {
   const { users, toggleUserPresence } = useUserContext();
   const [selectedUserId, setSelectedUserId] = useState<number | null>(null);
   const router = useRouter();
 
-  // Function to toggle a user's presence
+  /**
+   * handleToggle Function
+   *
+   * This function toggles the presence status of the selected user and navigates to the /users page.
+   */
   const handleToggle = () => {
     if (selectedUserId !== null) {
       toggleUserPresence(selectedUserId);

@@ -6,6 +6,13 @@ interface UserCardProps {
   user: User;
 }
 
+
+/**
+ * UserCard Component
+ *
+ * This component displays a user's name and presence status.
+ * It uses Tailwind CSS for styling.
+ */
 const UserCard = ({ user }: UserCardProps) => {
   return (
     <li

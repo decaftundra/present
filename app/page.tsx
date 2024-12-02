@@ -3,6 +3,12 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
+/**
+ * HomePage Component
+ *
+ * This component serves as the home page and automatically redirects to the /users page.
+ * While the redirection is happening, it displays a spinner to indicate loading.
+ */
 const HomePage = () => {
   const router = useRouter();
 

@@ -4,9 +4,20 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+/**
+ * Navbar Component
+ *
+ * This component displays the navigation links for the application.
+ * It uses the `usePathname` hook to get the current pathname.
+ */
 const Navbar = () => {
   const pathname = usePathname();
 
+  /**
+   * linkClasses Function
+   *
+   * This function returns the appropriate CSS classes for a link based on the current path.
+   */
   const linkClasses = (path: string) =>
     `hover:text-blue-400 transition-colors ${
       pathname === path ? 'text-blue-400 font-bold' : 'text-gray-100'
